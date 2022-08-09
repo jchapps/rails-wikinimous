@@ -1,0 +1,10 @@
+<%= render 'articles/header' %>
+
+<% @articles.each do |article|  %>
+  <div class="notification">
+    <div class="notification-content">
+      <p><small><%= link_to article.title, article_path(article)%></small></p>
+      <p><strong><%= article.content %></strong></p>
+    </div>
+  </div>
+<% end %>
